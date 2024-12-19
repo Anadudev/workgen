@@ -11,7 +11,6 @@ export interface SidenavItem {
 export interface SidenavSection {
     title?: string;
     icon: LucideIcon;
-    icon: LucideIcon;
     items: SidenavItem[];
 }
 
