@@ -25,8 +25,7 @@ import { usePathname } from 'next/navigation'
 import { useSidebar } from "@/components/ui/sidebar"
 import { cn } from '@/lib/utils'
 
-
-export function CustomTrigger({ className }: { className?: string }) {
+export const CustomTrigger = ({ className }: { className?: string }) => {
     const { toggleSidebar } = useSidebar()
 
     return <span onClick={toggleSidebar} className={cn('size-fit text-xl cursor-pointer', className)}>
@@ -79,17 +78,15 @@ const Sidenav = () => {
                                                                 </DropdownMenuItem>
                                                             ))}
                                                         </DropdownMenuContent>
-                                                    </DropdownMenu>
-                                                        :
-                                                        <SidebarMenuButton asChild>
-                                                            <Link onClick={toggleSidebar} href={item.href}>
-                                                                <div className={`h-full px-[2px] rounded-full  ${pathname == item.href ? ' bg-primary' : ''}`}></div>
-                                                                <item.icon />
-                                                                <span>
-                                                                    {item.name}
-                                                                </span>
-                                                            </Link>
-                                                        </SidebarMenuButton>}
+                                                    </DropdownMenu> : <SidebarMenuButton asChild>
+                                                        <Link onClick={toggleSidebar} href={item.href}>
+                                                            <div className={`h-full px-[2px] rounded-full  ${pathname == item.href ? ' bg-primary' : ''}`}></div>
+                                                            <item.icon />
+                                                            <span>
+                                                                {item.name}
+                                                            </span>
+                                                        </Link>
+                                                    </SidebarMenuButton>}
                                             </SidebarMenuItem>
                                         ))}
                                     </div>
