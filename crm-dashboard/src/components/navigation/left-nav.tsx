@@ -36,7 +36,7 @@ export function CustomTrigger({ className }: { className?: string }) {
 
 const Sidenav = () => {
     const pathname = usePathname();
-    const { open } = useSidebar();
+    const { open, toggleSidebar } = useSidebar();
     return (
         <>
             <CustomTrigger className={`mt-16 ${open ? 'hidden' : ''}`} />
@@ -60,7 +60,7 @@ const Sidenav = () => {
                                                     item?.children ? <DropdownMenu>
                                                         <DropdownMenuTrigger asChild>
                                                             <SidebarMenuButton asChild>
-                                                                <div className="cursor-pointer">
+                                                                <div onClick={toggleSidebar} className="cursor-pointer">
                                                                     <div className={`h-full px-[2px] rounded-full  ${pathname == item.href ? ' bg-primary' : ''}`}></div>
                                                                     <item.icon />
                                                                     <span>{item.name}</span>
@@ -82,7 +82,7 @@ const Sidenav = () => {
                                                     </DropdownMenu>
                                                         :
                                                         <SidebarMenuButton asChild>
-                                                            <Link href={item.href}>
+                                                            <Link onClick={toggleSidebar} href={item.href}>
                                                                 <div className={`h-full px-[2px] rounded-full  ${pathname == item.href ? ' bg-primary' : ''}`}></div>
                                                                 <item.icon />
                                                                 <span>
