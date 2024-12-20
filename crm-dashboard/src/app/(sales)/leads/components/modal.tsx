@@ -203,7 +203,7 @@ const LeadModal: React.FC<LeadModalProps> = ({
                     record in optimizing operations and enhancing customer
                     experiences, Under her guidance. the company has flourished,
                     becoming a hallmark of quality and innovation.{" "}
-                    {name.split(" ")[0] || ""}'s commitment to excellence makes
+                    {name.split(" ")[0] || ""}&#39;s commitment to excellence makes
                     her an ideal partner for any organization looking to grow
                     and succeed. Always seeking top-tier equipment to elevate
                     the customer experience, ensuring consistent, high-quality
