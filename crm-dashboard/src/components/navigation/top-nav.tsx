@@ -15,7 +15,7 @@ import Link from 'next/link'
 const TopNav = () => {
   return (
     <div className='fixed z-50 bg-slate-900 w-full top-0 left-0'>
-      <div className='flex items-center justify-between p-4'>
+      <div className='flex flex-col items-center sm:flex-row justify-between p-4'>
         <div className='text-slate-300 flex space-x-4'>
           <Link href={'/'} className=''>
             <Grip />

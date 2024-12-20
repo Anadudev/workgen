@@ -32,7 +32,7 @@ const LeadWelcomeCard = () => {
                   <div className="flex gap-2 items-center">
                     {/* <Minus className="rotate-90" /> */}
                     <div className="border h-9 -mb-5 border-black z-10"></div>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center flex-wrap gap-2">
                       <small>
                         Target{" "}
                         <span className="font-semibold text-black">

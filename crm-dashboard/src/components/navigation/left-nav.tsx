@@ -38,13 +38,13 @@ const Sidenav = () => {
     const { open, toggleSidebar } = useSidebar();
     return (
         <>
-            <CustomTrigger className={`mt-16 ${open ? 'hidden' : ''}`} />
+            <CustomTrigger className={`sm:mt-16 mt-24 ${open ? 'hidden' : ''}`} />
             <Sidebar>
                 <SidebarHeader />
                 <SidebarContent className=''>
                     <SidebarGroup />
                     <SidebarContent>
-                        <CustomTrigger className='pl-4 mt-9' />
+                        <CustomTrigger className='pl-4 md:mt-9' />
                         <SidebarMenu className='space-y-4'>
                             {sidenavItems.map((section, index) => (
                                 <SidebarMenuItem key={index}>
