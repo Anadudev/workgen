@@ -19,7 +19,6 @@ import { whyBadge, whyPick } from "@/app/(sales)/leads/data/lead";
 export interface LeadModalProps {
   name: string;
   title: string;
-  social?: unknown;
   subtitle: string;
   summery: string;
   footer: string;
@@ -28,7 +27,6 @@ export interface LeadModalProps {
 }
 const LeadModal: React.FC<LeadModalProps> = ({
   name,
-  social,
   title,
   subtitle,
   summery,
