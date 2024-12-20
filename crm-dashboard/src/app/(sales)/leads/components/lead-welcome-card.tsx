@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../custom.css";
-import { Brain } from "lucide-react";
+import { Brain, CircleDot, Minus } from "lucide-react";
 import {
   targetColors,
   Activities,
@@ -23,13 +23,44 @@ const LeadWelcomeCard = () => {
                   achieved and rest can be achieved by focusing on 20 top leds.
                 </p>
               </p>
-              <div className="flex w-full overflow-hidden h-[10px] border rounded-full">
-                {targetColors.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`${item.color} ${item.width}`}
-                  ></div>
-                ))}
+              <div className="text-slate-500 space-y-2">
+                <div className="flex justify-between">
+                  <div className="flex gap-2 items-center">
+                    <CircleDot className="size-4" />
+                    <small>1 month until Q4 ends</small>
+                  </div>
+                  <div className="flex gap-2 items-center">
+                    {/* <Minus className="rotate-90" /> */}
+                    <div className="border h-9 -mb-5 border-black z-10"></div>
+                    <div className="flex justify-between items-center">
+                      <small>
+                        Target{" "}
+                        <span className="font-semibold text-black">
+                          $45 million
+                        </span>
+                      </small>
+                      <small>68% target achieved</small>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex w-full overflow-hidden h-[10px] border rounded-full">
+                  {targetColors.map((item, index) => (
+                    <div
+                      key={index}
+                      className={`${item.color} ${item.width}`}
+                    ></div>
+                  ))}
+                </div>
+                <div className="flex gap-2">
+                  {targetColors.map((item, index) => (
+                    <div key={index} className="flex gap-2 items-center">
+                      <div
+                        className={`${item.color} size-3 rounded-full`}
+                      ></div>
+                      <small className="text-slate-500">{item.legend}</small>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
             <div className="flex flex-wrap lg:flex-nowrap gap-2">

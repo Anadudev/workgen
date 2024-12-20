@@ -3,11 +3,31 @@ import { RiGeminiFill } from "react-icons/ri";
 
 
 export const targetColors = [
-    { color: "bg-green-300", width: "w-[30%]" },
-    { color: "bg-blue-300", width: "w-[20%]" },
-    { color: "bg-pink-300", width: "w-[10%]" },
-    { color: "bg-yellow-300", width: "w-[5%]" },
-    { color: "bg-gray-300", width: "w-[50%]" },
+    {
+        color: "bg-green-300",
+        width: "w-[30%]",
+        legend: "Won $18m"
+    },
+    {
+        color: "bg-blue-300",
+        width: "w-[20%]",
+        legend: "Committed $8m"
+    },
+    {
+        color: "bg-pink-300",
+        width: "w-[10%]",
+        legend: "Best case $7m"
+    },
+    {
+        color: "bg-yellow-300",
+        width: "w-[5%]",
+        legend: "Qualified $3m"
+    },
+    {
+        color: "bg-gray-300",
+        width: "w-[50%]",
+        legend: "Leads $75m"
+    },
 ];
 
 export const Activities = [
