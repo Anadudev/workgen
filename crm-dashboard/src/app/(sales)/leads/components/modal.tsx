@@ -11,7 +11,6 @@ import {
 import {
   Brain,
   LucideIcon,
-  Mail,
   Pencil,
   SendHorizontal,
   ThumbsDown,
