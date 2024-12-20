@@ -1,6 +1,6 @@
 import React from "react";
 import "../../../custom.css";
-import { Brain, CircleDot, Minus } from "lucide-react";
+import { Brain, CircleDot } from "lucide-react";
 import {
   targetColors,
   Activities,
