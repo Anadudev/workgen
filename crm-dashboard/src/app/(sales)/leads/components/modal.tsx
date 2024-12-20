@@ -73,7 +73,10 @@ const LeadModal: React.FC<LeadModalProps> = ({
           <DialogHeader>
             <DialogTitle>
               <div className="inline-flex items-center gap-2">
-                <Mail /> Engage with {name}
+                <div className="relative overflow-hidden size-6">
+                  <Image src={"/mail.png"} alt="" fill />
+                </div>{" "}
+                Engage with {name}
               </div>
             </DialogTitle>
             <Separator />
