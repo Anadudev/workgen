@@ -8,7 +8,15 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Brain, LucideIcon, Mail, Pencil, SendHorizontal } from "lucide-react";
+import {
+  Brain,
+  LucideIcon,
+  Mail,
+  Pencil,
+  SendHorizontal,
+  ThumbsDown,
+  ThumbsUp,
+} from "lucide-react";
 import { Separator } from "@radix-ui/react-separator";
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
@@ -61,7 +69,7 @@ const LeadModal: React.FC<LeadModalProps> = ({
         // asChild
         className="bg-gradient-to-r from-blue-400 via-green-400 to-purple-400 p-[2px] rounded-xl"
       >
-        <div className="bg-slate-100 rounded-md p-4 max-h-[90vh] overflow-y-auto">
+        <div className="bg-slate-100 rounded-md p-4 max-h-[90vh] overflow-y-auto space-y-4">
           <DialogHeader>
             <DialogTitle>
               <div className="inline-flex items-center gap-2">
@@ -70,8 +78,8 @@ const LeadModal: React.FC<LeadModalProps> = ({
             </DialogTitle>
             <Separator />
             <DialogDescription asChild>
-              <div className="">
-                <div className="bg-white rounded-xl py-2 p-4 flex gap-2 items-center">
+              <div className=" space-y-4">
+                <div className="bg-white rounded-xl py-2 p-4 flex gap-2 items-center ">
                   <div className="relative size-14 rounded-full">
                     <div className="relative overflow-hidden size-full rounded-full">
                       <Image src={image} alt="" fill />
@@ -87,7 +95,7 @@ const LeadModal: React.FC<LeadModalProps> = ({
                     </div>
                   </div>
                 </div>
-                <div className="bg-white rounded-xl py-2 p-4">
+                <div className="bg-white rounded-xl py-2 p-4  space-y-4">
                   <div className="bg-gradient-to-r from-blue-200 to-purple-100 p-2 rounded-xl flex justify-between items-center">
                     <div className="flex gap-2">
                       <Brain className="size-7" />
@@ -115,13 +123,13 @@ const LeadModal: React.FC<LeadModalProps> = ({
                         Research
                       </div>
                     </div>
-                    <div className="p-4 bg-white">
-                      <div className="bg-gradient-to-r from-blue-100 to-purple-50 p-4 rounded-xl">
+                    <div className="p-4 bg-white  space-y-4">
+                      <div className="bg-gradient-to-r from-blue-100 to-purple-50 p-4 rounded-xl  space-y-4">
                         <div className="text-xl font-semibold">
                           Why i picked this lead
                         </div>
                         <div className="text-black">
-                          <ul className="list-disc pl-6">
+                          <ul className="list-disc pl-6  space-y-2">
                             {whyPick.map((item, index) => (
                               <li key={index} className="">
                                 <div
@@ -132,7 +140,7 @@ const LeadModal: React.FC<LeadModalProps> = ({
                           </ul>
                         </div>
                         <div className="">
-                          <div className="flex gap-2">
+                          <div className="flex gap-3">
                             {whyBadge.map((item, index) => (
                               <div
                                 key={index}
@@ -150,30 +158,55 @@ const LeadModal: React.FC<LeadModalProps> = ({
                           </div>
                         </div>
                       </div>
-                      <div className="flex gap-1">
-                        <div className="bg-gray-100 border rounded px-1">
-                          <div className="relative overflow-hidden size-4">
-                            <Image fill src={"/shield.png"} alt="" />
+                      <div className="flex justify-between">
+                        <div className="flex gap-1">
+                          <div className="bg-gray-100 border rounded px-1 flex items-center">
+                            <div className="relative overflow-hidden size-4">
+                              <Image fill src={"/shield.png"} alt="" />
+                            </div>
+                          </div>
+                          <div className="bg-gray-100 border rounded px-1 flex gap-1 items-center">
+                            1{" "}
+                            <Separator
+                              orientation="vertical"
+                              className="border"
+                            />
+                            <div className="relative overflow-hidden size-4">
+                              <Image fill src={"/chart.png"} alt="" />
+                            </div>
+                            D365 Sales
+                          </div>
+                          <div className="bg-gray-100 border rounded px-1">
+                            +2
                           </div>
                         </div>
-                        <div className="bg-gray-100 border rounded px-1 flex gap-1 items-center">
-                          1{" "}
-                          <Separator
-                            orientation="vertical"
-                            className="border mx-1"
-                          />
-                          <div className="relative overflow-hidden size-4">
-                            <Image fill src={"/chart.png"} alt="" />
+                        <div className="flex gap-1 items-center">
+                          <div className="bg-gray-100 border rounded px-1">
+                            AI-generated content may be incorrect
                           </div>
-                          D365 Sales
-                        </div>
-                        <div className="bg-gray-100 border rounded px-1">
-                          +2
+                          <ThumbsUp className="size-5" />
+                          <ThumbsDown className="size-5" />
                         </div>
                       </div>
                     </div>
-                    {/* <div className=""></div> */}
+                    <div className=""></div>
                   </div>
+                </div>
+                <div className="text-slate-800 bg-white rounded-xl p-4 shadow-md">
+                  <div className="font-bold">
+                    About {name.split(" ")[0] || ""}
+                  </div>
+                  <p className="">
+                    {name}, the {title}, is a dynamic leader with a proven track
+                    record in optimizing operations and enhancing customer
+                    experiences, Under her guidance. the company has flourished,
+                    becoming a hallmark of quality and innovation.{" "}
+                    {name.split(" ")[0] || ""}'s commitment to excellence makes
+                    her an ideal partner for any organization looking to grow
+                    and succeed. Always seeking top-tier equipment to elevate
+                    the customer experience, ensuring consistent, high-quality
+                    service.
+                  </p>
                 </div>
               </div>
             </DialogDescription>
