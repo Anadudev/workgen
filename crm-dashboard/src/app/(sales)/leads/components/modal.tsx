@@ -61,7 +61,7 @@ const LeadModal: React.FC<LeadModalProps> = ({
         // asChild
         className="bg-gradient-to-r from-blue-400 via-green-400 to-purple-400 p-[2px] rounded-xl"
       >
-        <div className="bg-slate-100 rounded-md p-4">
+        <div className="bg-slate-100 rounded-md p-4 max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>
               <div className="inline-flex items-center gap-2">
@@ -150,7 +150,29 @@ const LeadModal: React.FC<LeadModalProps> = ({
                           </div>
                         </div>
                       </div>
+                      <div className="flex gap-1">
+                        <div className="bg-gray-100 border rounded px-1">
+                          <div className="relative overflow-hidden size-4">
+                            <Image fill src={"/shield.png"} alt="" />
+                          </div>
+                        </div>
+                        <div className="bg-gray-100 border rounded px-1 flex gap-1 items-center">
+                          1{" "}
+                          <Separator
+                            orientation="vertical"
+                            className="border mx-1"
+                          />
+                          <div className="relative overflow-hidden size-4">
+                            <Image fill src={"/chart.png"} alt="" />
+                          </div>
+                          D365 Sales
+                        </div>
+                        <div className="bg-gray-100 border rounded px-1">
+                          +2
+                        </div>
+                      </div>
                     </div>
+                    {/* <div className=""></div> */}
                   </div>
                 </div>
               </div>

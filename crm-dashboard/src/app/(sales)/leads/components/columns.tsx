@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
-import LeadModal from "@/app/(sales)/leads/components/modal";
 
 
 // This type is used to define the shape of our data.
