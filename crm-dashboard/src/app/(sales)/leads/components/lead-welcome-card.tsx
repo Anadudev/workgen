@@ -53,7 +53,7 @@ const LeadWelcomeCard = () => {
                           <p className="text-sm text-slate-400">{item.title}</p>
                         </div>
                       </div>
-                      <div className="rounded-xl p-3 bg-gradient-to-r from-blue-200 to-blue-100 space-y-3">
+                      <div className="rounded-xl p-3 bg-gradient-to-r from-blue-200 to-transparent space-y-3">
                         <div className="flex gap-2">
                           <item.icon />
                           <p className="text-sm font-semibold">

@@ -49,3 +49,120 @@ export const leadCustomers = [
         footer: "Upcoming meeting . Due today",
     }
 ];
+
+export const leadTableData = [
+    {
+        name: 'Winford Ahser',
+        topic: 'Cafe 100 for commercial use',
+        status: 'New',
+        createdOn: '4/02/2024 12:00PM',
+    },
+    {
+        name: 'Rosa Munger',
+        topic: 'Cafe 200 for personal use',
+        status: 'In progress',
+        createdOn: '4/01/2024 12:00PM',
+    },
+    {
+        name: 'Edna Bunch',
+        topic: 'Cafe 300 for office',
+        status: 'Closed',
+        createdOn: '3/31/2024 12:00PM',
+    },
+    {
+        name: 'Chris Nadio',
+        topic: 'Cafe 400 for events',
+        status: 'New',
+        createdOn: '3/30/2024 12:00PM',
+    },
+    {
+        name: 'Mona Rayes',
+        topic: 'Cafe 500 for commercial use',
+        status: 'In progress',
+        createdOn: '3/29/2024 12:00PM',
+    },
+    {
+        name: 'John Doe',
+        topic: 'Cafe 600 for personal use',
+        status: 'Closed',
+        createdOn: '3/28/2024 12:00PM',
+    },
+    {
+        name: 'Jane Doe',
+        topic: 'Cafe 700 for office',
+        status: 'New',
+        createdOn: '3/27/2024 12:00PM',
+    },
+    {
+        name: 'Allen Munger',
+        topic: 'Cafe 800 for events',
+        status: 'In progress',
+        createdOn: '3/26/2024 12:00PM',
+    },
+    {
+        name: 'Robert Doe',
+        topic: 'Cafe 900 for commercial use',
+        status: 'Closed',
+        createdOn: '3/25/2024 12:00PM',
+    },
+    {
+        name: 'David Rayes',
+        topic: 'Cafe 1000 for office',
+        status: 'New',
+        createdOn: '3/24/2024 12:00PM',
+    },
+    {
+        name: 'Sarah Doe',
+        topic: 'Cafe 1100 for events',
+        status: 'In progress',
+        createdOn: '3/23/2024 12:00PM',
+    },
+    {
+        name: 'Michael Munger',
+        topic: 'Cafe 1200 for commercial use',
+        status: 'Closed',
+        createdOn: '3/22/2024 12:00PM',
+    },
+    {
+        name: 'Emily Doe',
+        topic: 'Cafe 1300 for personal use',
+        status: 'New',
+        createdOn: '3/21/2024 12:00PM',
+    },
+    {
+        name: 'Kevin Rayes',
+        topic: 'Cafe 1400 for office',
+        status: 'In progress',
+        createdOn: '3/20/2024 12:00PM',
+    },
+    {
+        name: 'Laura Doe',
+        topic: 'Cafe 1500 for events',
+        status: 'Closed',
+        createdOn: '3/19/2024 12:00PM',
+    },
+    {
+        name: 'Steven Munger',
+        topic: 'Cafe 1600 for commercial use',
+        status: 'New',
+        createdOn: '3/18/2024 12:00PM',
+    },
+    {
+        name: 'Rebecca Doe',
+        topic: 'Cafe 1700 for personal use',
+        status: 'In progress',
+        createdOn: '3/17/2024 12:00PM',
+    },
+    {
+        name: 'Daniel Rayes',
+        topic: 'Cafe 1800 for office',
+        status: 'Closed',
+        createdOn: '3/16/2024 12:00PM',
+    },
+    {
+        name: 'Jessica Doe',
+        topic: 'Cafe 1900 for events',
+        status: 'New',
+        createdOn: '3/15/2024 12:00PM',
+    },
+]

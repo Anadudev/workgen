@@ -6,7 +6,7 @@ export const ribbonActions = [
     {
         name: 'Show cart',
         icon: Image,
-        color:''
+        color: ''
     },
     {
         name: 'Focused view',
