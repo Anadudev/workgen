@@ -37,9 +37,9 @@ const LeadWelcomeCard = () => {
                                         <div className="rounded-xl p-3 bg-gradient-to-r from-blue-200 to-blue-100 space-y-3">
                                             <div className="flex gap-2">
                                                 <item.icon />
-                                                <p className="">{item.subtitle}</p>
+                                                <p className="text-sm font-semibold">{item.subtitle}</p>
                                             </div>
-                                            <div className="">{item.summery}</div>
+                                            <div className="text-slate-600 text-sm">{item.summery}</div>
                                         </div>
                                         <small className='text-slate-400'>{item.footer}</small>
                                     </div>)}
