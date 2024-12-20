@@ -14,7 +14,7 @@ const LeadWelcomeCard = () => {
       Lead Welcome Card
       <div className="rounded-[1.6rem] p-[2px] bg-gradient-to-b from-blue-500 to-purple-500 shadow-lg w-full">
         <div className="">
-          <div className="bg-white p-5 rounded-3xl w-full space-y-5">
+          <div className="bg-white p-5 rounded-3xl w-full space-y-5 max-h-[600px] overflow-y-auto">
             <div className="grid gap-3 md:grid-cols-2 items-center justify-between">
               <p className="flex gap-x-2 items-center font-semibold text-lg">
                 <Brain className="size-7 " />
