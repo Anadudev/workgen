@@ -78,6 +78,12 @@ export const leadTableData = [
         createdOn: '4/02/2024 12:00PM',
     },
     {
+        name: 'Winford Ahser',
+        topic: 'Cafe 100 for commercial use',
+        status: 'New',
+        createdOn: '4/02/2024 12:00PM',
+    },
+    {
         name: 'Rosa Munger',
         topic: 'Cafe 200 for personal use',
         status: 'In progress',
@@ -184,5 +190,29 @@ export const leadTableData = [
         topic: 'Cafe 1900 for events',
         status: 'New',
         createdOn: '3/15/2024 12:00PM',
+    },
+]
+
+export const whyPick = [
+    { why: "is a key <b>decision maker</b> and was browsing <b>'espresso machines'</b> on First Coffee's website" },
+    { why: "Multiple people at her company have reported 'slowness' during <b>service requests<b/>" },
+    { why: "Northwind Traders currently see <b>$200M in revenue</b> from their in-store coffee shops" },
+]
+
+export const whyBadge = [
+    {
+        image: "/decision.png",
+        description: 'Decision maker',
+        stat: 'Yes',
+    },
+    {
+        image: "/potential.png",
+        description: 'Potential deal value',
+        stat: 'Yes',
+    },
+    {
+        image: "/intent.png",
+        description: 'Intent',
+        stat: 'Yes',
     },
 ]

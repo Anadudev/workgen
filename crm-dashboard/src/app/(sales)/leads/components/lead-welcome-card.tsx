@@ -7,6 +7,7 @@ import {
   leadCustomers,
 } from "@/app/(sales)/leads/data/lead";
 import Image from "next/image";
+import LeadModal from "./modal";
 
 const LeadWelcomeCard = () => {
   return (
@@ -75,27 +76,7 @@ const LeadWelcomeCard = () => {
                       key={index}
                       className="rounded-2xl shadow-md p-4 border w-full"
                     >
-                      <div className="flex gap-2">
-                        <div className="relative overflow-hidden size-8 rounded-full ">
-                          <Image src={item.image} alt="" fill />
-                        </div>
-                        <div className="">
-                          <h3>{item.name}</h3>
-                          <p className="text-sm text-slate-400">{item.title}</p>
-                        </div>
-                      </div>
-                      <div className="rounded-xl p-3 bg-gradient-to-r from-blue-200 to-transparent space-y-3">
-                        <div className="flex gap-2">
-                          <item.icon />
-                          <p className="text-sm font-semibold">
-                            {item.subtitle}
-                          </p>
-                        </div>
-                        <div className="text-slate-600 text-sm">
-                          {item.summery}
-                        </div>
-                      </div>
-                      <small className="text-slate-400">{item.footer}</small>
+                      <LeadModal name={item.name} title={item.title} subtitle={item.subtitle} summery={item.summery} footer={item.footer} image={item.image} Icon={item.icon} />
                     </div>
                   ))}
                 </div>

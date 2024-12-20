@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
+import LeadModal from "@/app/(sales)/leads/components/modal";
+
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
@@ -42,13 +44,9 @@ export const columns: ColumnDef<Payment>[] = [
     accessorKey: "name",
     header: () => <div className="">Name</div>,
     cell: ({ row }) => {
-      const amount: string = row.getValue("name");
-      //   const formatted = new Intl.NumberFormat("en-US", {
-      //     style: "currency",
-      //     currency: "USD",
-      //   }).format(amount);
+      const name: string = row.getValue("name");
 
-      return <div className="text-primary font-medium">{amount}</div>;
+      return <div className="text-primary font-medium">{name}</div>;
     },
   },
   {
