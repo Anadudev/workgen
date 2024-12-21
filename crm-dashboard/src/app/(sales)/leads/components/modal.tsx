@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import {
   Brain,
+  ChevronRight,
   LucideIcon,
   Pencil,
   SendHorizontal,
@@ -19,9 +20,10 @@ import {
 import { Separator } from "@radix-ui/react-separator";
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
-import { PiButterfly } from "react-icons/pi";
+import { PiButterfly, PiGreaterThan } from "react-icons/pi";
 import { Button } from "@/components/ui/button";
 import { whyBadge, whyPick } from "@/app/(sales)/leads/data/lead";
+import Link from "next/link";
 
 export interface LeadModalProps {
   name: string;
@@ -66,9 +68,12 @@ const LeadModal: React.FC<LeadModalProps> = ({
       </DialogTrigger>
       <DialogContent
         // asChild
-        className="bg-gradient-to-r from-blue-400 via-green-400 to-purple-400 p-[2px] rounded-xl"
+        className="bg-gradient-to-r from-blue-400 via-green-400 to-purple-400 p-[2px]"
       >
-        <div className="bg-slate-100 rounded-md p-4 max-h-[90vh] overflow-y-auto space-y-4">
+        <div className="absolute -right-4 cursor-pointer top-1/2 transform -translate-y-1/2 border shadow-md rounded-full bg-white size-9 flex items-center justify-center">
+        <ChevronRight className="ml-1 text-blue-500"/>
+        </div>
+        <div className="bg-slate-100 rounded-[1.4rem] p-4 max-h-[90vh] overflow-y-auto space-y-4">
           <DialogHeader>
             <DialogTitle>
               <div className="inline-flex items-center gap-2">
@@ -81,7 +86,7 @@ const LeadModal: React.FC<LeadModalProps> = ({
             <Separator />
             <DialogDescription asChild>
               <div className=" space-y-4">
-                <div className="bg-white rounded-xl py-2 p-4 flex gap-2 items-center ">
+                <div className="bg-white rounded-xl py-2 p-4 flex gap-2 items-center">
                   <div className="relative size-14 rounded-full">
                     <div className="relative overflow-hidden size-full rounded-full">
                       <Image src={image} alt="" fill />
@@ -97,11 +102,13 @@ const LeadModal: React.FC<LeadModalProps> = ({
                     </div>
                   </div>
                 </div>
-                <div className="bg-white rounded-xl py-2 p-4  space-y-4">
-                  <div className="bg-gradient-to-r from-blue-200 to-purple-100 p-2 rounded-xl flex justify-between items-center">
+                <div className="bg-white rounded-xl py-2 p-4  space-y-4 shadow-md">
+                  <div className="bg-gradient-to-r from-blue-200 to-purple-100 p-2 rounded-xl flex justify-between items-center flex-wrap md:flex-nowrap gap-2">
                     <div className="flex gap-2">
-                      <Brain className="size-7" />
-                      <p className="text-sm">{summery}</p>
+                      <Brain className="size-7 " />
+                      <p className="text-sm text-transparent bg-clip-text font-extrabold bg-gradient-to-r from-blue-500 to-purple-500 ">
+                        {summery}
+                      </p>
                     </div>
                     <div className="flex gap-2">
                       <Button variant="outline" size={"sm"}>
@@ -127,40 +134,47 @@ const LeadModal: React.FC<LeadModalProps> = ({
                     </div>
                     <div className="p-4 bg-white  space-y-4">
                       <div className="bg-gradient-to-r from-blue-100 to-purple-50 p-4 rounded-xl  space-y-4">
-                        <div className="text-xl font-semibold">
-                          Why i picked this lead
+                        <div className="text-xl  text-transparent bg-clip-text font-extrabold bg-gradient-to-r from-blue-500 to-purple-500">
+                          Why I picked this lead
                         </div>
                         <div className="text-black">
                           <ul className="list-disc pl-6  space-y-2">
                             {whyPick.map((item, index) => (
                               <li key={index} className="">
                                 <div
-                                  dangerouslySetInnerHTML={{ __html: item.why }}
+                                  dangerouslySetInnerHTML={{
+                                    __html:
+                                      index === 0
+                                        ? name.split(" ")[0] + item.why
+                                        : item.why,
+                                  }}
                                 />
                               </li>
                             ))}
                           </ul>
                         </div>
                         <div className="">
-                          <div className="flex gap-3">
+                          <div className="flex gap-3  flex-wrap md:flex-nowrap md:justify-start justify-center">
                             {whyBadge.map((item, index) => (
                               <div
                                 key={index}
-                                className="flex gap-2 items-center p-4 shadow-sm bg-white rounded-xl"
+                                className="flex gap-2 items-center p-4 shadow-md bg-white rounded-xl"
                               >
                                 <div className="relative overflow-hidden size-12">
                                   <Image alt="" fill src={item.image} />
                                 </div>
                                 <div className="">
-                                  <div className="">Decision Maker</div>
-                                  <div className="">yes</div>
+                                  <div className="">{item.description}</div>
+                                  <div className=" text-transparent bg-clip-text font-extrabold bg-gradient-to-r from-blue-500 to-purple-500 text-xl">
+                                    {item.stat}
+                                  </div>
                                 </div>
                               </div>
                             ))}
                           </div>
                         </div>
                       </div>
-                      <div className="flex justify-between">
+                      <div className="flex justify-between  flex-wrap md:flex-nowrap gap-2">
                         <div className="flex gap-1">
                           <div className="bg-gray-100 border rounded px-1 flex items-center">
                             <div className="relative overflow-hidden size-4">
@@ -203,12 +217,33 @@ const LeadModal: React.FC<LeadModalProps> = ({
                     record in optimizing operations and enhancing customer
                     experiences, Under her guidance. the company has flourished,
                     becoming a hallmark of quality and innovation.{" "}
-                    {name.split(" ")[0] || ""}&#39;s commitment to excellence makes
-                    her an ideal partner for any organization looking to grow
-                    and succeed. Always seeking top-tier equipment to elevate
-                    the customer experience, ensuring consistent, high-quality
-                    service.
+                    {name.split(" ")[0] || ""}&#39;s commitment to excellence
+                    makes her an ideal partner for any organization looking to
+                    grow and succeed. Always seeking top-tier equipment to
+                    elevate the customer experience, ensuring consistent,
+                    high-quality service.
                   </p>
+                </div>
+                <div className="flex justify-between flex-wrap sm:flex-nowrap sm:justify-center gap-2">
+                  <div className="flex gap-1">
+                    <div className=" px-1 flex items-center">
+                      <p className="">Showing 1 of 9</p>
+                    </div>
+                    <Link href="#" className="">
+                      Show all
+                    </Link>
+                  </div>
+                  <div className="flex gap-px items-center mx-auto">
+                    <div className="border-2 rounded-full border-primary w-6"></div>
+                    <div className="border size-1 rounded-full bg-slate-500"></div>
+                    <div className="border size-1 rounded-full bg-slate-500"></div>
+                    <div className="border size-1 rounded-full bg-slate-500"></div>
+                    <div className="border size-1 rounded-full bg-slate-500"></div>
+                  </div>
+                  <div className="flex gap-1 items-center">
+                    <ThumbsUp className="size-5" />
+                    <ThumbsDown className="size-5" />
+                  </div>
                 </div>
               </div>
             </DialogDescription>
