@@ -11,8 +11,7 @@ import LeadModal from "./modal";
 
 const LeadWelcomeCard = () => {
   return (
-    <div className="neon-border">
-      Lead Welcome Card
+    <div className="neon-border pt-3">
       <div className="rounded-[1.6rem] p-[2px] bg-gradient-to-b from-blue-500 to-purple-500 shadow-lg w-full">
         <div className="">
           <div className="bg-white p-5 rounded-3xl w-full space-y-5 max-h-[600px] overflow-y-auto">
