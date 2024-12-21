@@ -20,7 +20,7 @@ import {
 import { Separator } from "@radix-ui/react-separator";
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
-import { PiButterfly, PiGreaterThan } from "react-icons/pi";
+import { PiButterfly } from "react-icons/pi";
 import { Button } from "@/components/ui/button";
 import { whyBadge, whyPick } from "@/app/(sales)/leads/data/lead";
 import Link from "next/link";
