@@ -110,7 +110,7 @@ const LeadModal: React.FC<LeadModalProps> = ({
                         {summery}
                       </p>
                     </div>
-                    <div className="flex gap-2">
+                    <div className="flex gap-2  flex-wrap md:flex-nowrap gap">
                       <Button variant="outline" size={"sm"}>
                         <Pencil />
                         Edit
@@ -132,7 +132,7 @@ const LeadModal: React.FC<LeadModalProps> = ({
                         Research
                       </div>
                     </div>
-                    <div className="p-4 bg-white  space-y-4">
+                    <div className="sm:p-4 bg-white  space-y-4">
                       <div className="bg-gradient-to-r from-blue-100 to-purple-50 p-4 rounded-xl  space-y-4">
                         <div className="text-xl  text-transparent bg-clip-text font-extrabold bg-gradient-to-r from-blue-500 to-purple-500">
                           Why I picked this lead
