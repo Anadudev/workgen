@@ -35,7 +35,7 @@ export default function RootLayout({
         <TopNav />
         <SidebarProvider defaultOpen={false} className="bg-slate-100">
           <Sidenav />
-          <div className="pl-2 pr-0 pb-0 sm:pt-16 pt-24 flex justify-between  w-full bg-slate-100">
+          <div className="pl-2 pr-0 pb-0 sm:pt-16 pt-24 flex justify-between  w-full bg-slate-100 gap-1">
             {children}
             <RightNav />
           </div>
